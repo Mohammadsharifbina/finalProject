@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+#container .heading-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    background-color: rgb(190, 160, 218);
+    padding: 0 2em;
+}
+#container .heading-section img{
+    height: 100%;
+}
+#container .heading-section ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    height: inherit;
+    align-items: center;
+
+
+}
+#container .heading-section ul li{
+    /* height: 4em; */
+}
+#container .heading-section ul li a{
+    border-radius: 0.3em;
+    background-color: white;
+    padding: 0.2em 1em;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+#container .heading-section ul li a:hover{
+    background-color: blue;
+    color: white;
+}
+
+#container .heading-section i{
+    color: white;
+    display: inline;
+
+    /* cursor: pointer; */
+}
+#container .heading-section i:hover{
+    color: blue;
+}
+#container .heading-section a{
+    text-decoration: none;
+}
+@media all and (max-width:620px)
+{
+    #container .heading-section i{
+        display: none;
+    }
+}
+#container .hero-section{
+    width: 100%;
+    height: 80vh;
+   display: flex;
+   background-image: url(asset/images/football/football/download.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1em;
+}
+#container .hero-section h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#container .hero-section p{
+    font-size: 2em;
+  
+    color: wheat;
+  
+   
+
+    text-align: center;
+}
+#container .hero-section  a{
+    text-decoration: none;
+    font-size:1.4em;
+    /* background-color: white; */
+    color: white;
+    padding: 0.2em 1em;
+    display: inline-block;
+   border-radius: 0.5em;
+    border: 1px solid rgb(124, 16, 52);
+    position: relative;
+    top: 1em;
+  text-transform: uppercase;
+}
+#container .hero-section a:hover{
+    background-color: whitesmoke;
+color: black;
+}
+#container .our-range{
+    background-color: rgb(240, 232, 232);
+    display: flex;
+    flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-transform: capitalize;
+  padding:  2em;
+  /* padding-bottom: 1em; */
+  margin: 1em 0;
+}
+#container .our-range .first-row h2{
+    position: relative;
+}
+#container .our-range .first-row h2::after{
+    width: 50%;
+    /* height: 10vh; */
+ content: "";
+ height: 0.2em;
+ position: absolute;
+ /* bottom: -1px; */
+ left: 50%;
+ top: 1.5em;
+ transform: translate(-50%,-50%);
+ background-color: green;
+
+ /* transition: 0.3s; */
+}
+#container .our-range .second-row{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 1em;
+}
+#container .our-range .second-row img{
+    width: 15em;
+    height: 10em;
+  padding: 1em;
+    /* background-color:rgb(182, 89, 89); */
+    position: relative;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0 10px gray;
+}
+
+
+#container .general-product{
+    width: 100%;
+    height: 50vh;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+
+}
+#container .general-product img{
+    margin: 0 5em;
+    width: 15em;
+}
+#container .general-product .general-porduct-content{
+    display: flex;
+    flex-direction: column;
+    /* width: 20em; */
+    gap: 1em;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#container .general-product .general-porduct-content h3{
+    /* color: rgb(196, 149, 149); */
+    font-size: 2em;
+    text-transform: uppercase;
+    
+}
+#container .general-product .general-porduct-content hr{
+    color: white;
+    
+    width: 100%;
+}
+#container .general-product .general-porduct-content a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: blue;
+    color: white;
+   
+    padding: 0.2em 1em;
+    border-radius: 0.2em;
+
+}
+#container .general-product .general-porduct-content a:hover{
+    background-color: white;
+    color: black;
+}
+#container .new-arrivle {
+    margin: 0.3em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 2.3em 0;
+    position: relative;
+    /* background:linear-gradient(rgb(123, 201, 123),rgb(148, 165, 196),rgb(177, 143, 143)); */
+}
+#container .new-arrivle #nwa{
+    text-transform: uppercase;
+    color: rgb(202, 137, 202);
+    position: absolute;
+    top: 1%;
+    left: 50%;
+}
+
+#container .new-arrivle .new-arrivle-cards{
+    height: 19em;
+    width: 12em;
+    /* background-color: rgb(223, 203, 203); */
+    box-shadow: 0 0 0.3em gray;
+    /* padding: 0 0.2em; */
+    border-radius: 0.3em;
+    overflow: hidden;
+
+}
+#container .new-arrivle .new-arrivle-cards .new-ar-img{
+    width: 100%;
+    padding: 1.5em;
+    background-color: rgb(185, 95, 95);
+
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents{
+   width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents h2{
+    color: grey;
+    margin-left: 0.1em;
+    text-transform: uppercase;
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents h3{
+    text-transform: uppercase;
+    margin-left: 0.1em;
+    margin-bottom: 0.1em;
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents h4{
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents a
+{
+    background-color: blue;
+    color: white;
+    padding: 0.4em 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+#container .new-arrivle .new-arrivle-cards .new-arrivle-cards-contents a:hover{
+    background-color: rgb(160, 160, 235);
+    /* border: 1px solid green; */
+    color: black;
+}

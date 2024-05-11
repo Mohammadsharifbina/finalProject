@@ -1,0 +1,137 @@
+#container{
+    display: flex;
+}
+
+#container #contact{
+    /* grid-column: 1/-1; */
+    height: 80vh;
+    background-image: linear-gradient(rgba(240, 231, 231, 0.6), rgba(236, 223, 223, 0.6)), url(asset/images/football/fooballback.png);    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+::placeholder{
+    text-transform: uppercase;
+}
+#container #contact h1{
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+}
+#container #contact .search input{
+
+        width: 18em;
+        padding: 0.5em;
+        float: left;
+        border-radius: 0.2em 0 0 0.2em;
+        border: none;
+        box-shadow: 0 0 2px gray;
+
+}
+#container #contact .search  span{
+    background-color: #444424;
+    padding: 0.36em 0.7em;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    border-radius:  0 0.2em  0.2em 0;
+}
+#container .products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 1em;
+    background-color: rgb(235, 223, 223);
+    padding: 0.4em;
+}
+#container .products .right-section{
+    width: 33%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}
+#container .products .right-section .right-section-content{
+    display: flex;
+    width: 70%;
+    /* height: 6em; */
+    border-radius: 0.4em;
+    overflow: hidden;
+    text-transform: capitalize;
+    background-color: white;
+    box-shadow: 0 0 3px gray;
+ 
+
+}
+#container .products .right-section .right-section-content .dress-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 0.4rem;
+}
+#container .products .right-section .right-section-content .dress-content h3{
+    display: inline;
+}
+#container .products .right-section .right-section-content .dress-content del{
+    display: inline;
+    margin-right: 0.5em;
+    color: gray;
+}
+#container .products .right-section .right-section-content .dress-content a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    color: blue;
+    border-radius: 0.2em;
+    margin-top: 1em;
+}
+#container .products .right-section .right-section-content .dress-content a:hover{
+text-decoration: underline;
+}
+#container .products .right-section .right-section-content img{
+    width: 7em;
+    /* margin-right: 1em; */
+}
+#container .products .center{
+    width: 33%;
+    height: 100vh;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#container .products .center .center-content{
+    padding: 1em;
+}
+#container .products .center .center-content h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(147, 147, 204);
+}
+#container .products .center .center-content a{
+    text-decoration: none;
+    padding: 0.5em 1em;
+    background-color: blueviolet;
+    color: white;
+    display: inline-block;
+    /* margin: 1em; */
+    border-radius: 0.4em;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px black;
+}
+#container .products .center .center-content a:hover{
+    background-color: blue;
+}
+#container .products .center img{
+    width: 100%;
+    height: 80%;
+}

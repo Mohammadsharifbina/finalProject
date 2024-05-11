@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffc;
+    display: flex;
+}
+
+#container .cards {
+    width: 40%;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 25em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    padding: 1em;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    box-shadow: 0 0 1em gray;
+}
+
+#container .cards .card-header {
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container .cards .card-header h1 {
+    text-transform: capitalize;
+}
+
+#container .cards .card-header h1,
+#container .cards .card-header h3 {
+    text-align: center;
+}
+
+@media screen and (max-width:1290px) {
+    #container .cards .card-header h1 {
+        font-size: 1.7em;
+    }
+    #container .cards .card-header h3 {
+        font-size: 1em;
+    }
+}
+
+#container .cards .card-header p {
+    text-align: center;
+    background-color: yellow;
+    padding: 1em;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+}
+
+@media screen and (max-width:1110px) {
+    #container .cards .card-header p {
+        font-size: 0.5em;
+    }
+}
+
+#container .cards hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+
+#container .cards .card-header img {
+    width: 50px;
+}
+
+#container .cards .card-info img {
+    width: 30%;
+    height: 100%;
+    margin-right: 2em;
+}
+
+#container .cards .card-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#container .cards .card-info .info {
+    width: 70%;
+}
+
+#container .cards .card-info .info .name {
+    margin-bottom: .21em;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#container .cards .card-info .info h3 {
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+#container .cards .card-info .info h4 {
+    text-transform: capitalize;
+    color: rgb(79, 74, 74);
+}
+
+.id-number {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    font-size: 2em;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
