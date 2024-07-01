@@ -17,5 +17,11 @@ class Book extends Model
     public function commettee(){
         return $this->belongsTo(Commettee::class);
     }
+    public function marks(){
+        return $this->hasOne(Mark::class);
+    }
+    public function semester(){
+        return $this->belongsTo(Semester::class);
+    }
     use HasFactory;
 }

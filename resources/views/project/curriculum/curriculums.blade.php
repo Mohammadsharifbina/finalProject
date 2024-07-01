@@ -22,21 +22,21 @@
 <table  id="myTable">
     <tr>
         <th>id</th>
-        <th>Description</th>
-        <th>edit</th>
-        <th>delete</th>
+        <th>{{__('nav.desc')}}</th>
+        <th>{{__('nav.edit')}}</th>
+        <th>{{__('nav.delete')}}</th>
        
     </tr>
     @foreach($curriculums as $c)
     <tr>
         <td>{{$c->id}}</td>
         <td>{{$c->description}}</td>
-        <td><a href="/curriculum/{{$c->id}}/edit" class="edit">edit</a></td>
+        <td><a href="/curriculum/{{$c->id}}/edit" class="edit">{{__('nav.edit')}}</a></td>
         <td>
             <form action="/curriculum/{{$c->id}}" method="post">
                 @csrf
                 @method('delete')
-                <input type="submit" value="delete">
+                <input type="submit" value="{{__('nav.delete')}}">
             </form>
         </td>
     </tr>

@@ -20,7 +20,7 @@ return new class extends Migration
 
             $table->string('publisher');
             $table->integer('No_credits');
-            $table->foreignId('teacher_id')->constrained();
+            $table->foreignId('semester_id')->constrained();
             $table->foreignId('curriculum_id')->constrained();
             $table->timestamps();
         });

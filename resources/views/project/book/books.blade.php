@@ -5,7 +5,7 @@
 <div id="alert">
     <div>
 
-        <a href="@yield('route')/create" id="create">create</a>
+        <a href="/@yield('route')/create" id="create">{{__('nav.create')}}</a>
     </div>
 
     
@@ -18,16 +18,15 @@
  
 </div>
 
-<table id="myTable">
+<table id="myTable" >
         <tr>
-            <th>name</th>
-            <th>auther</th>
-            <th>publisher</th>
-            <th>credits</th>
-            <th>teacher</th>
-            <th>curriculum</th>
-            <th>edit</th>
-            <th>delete</th>
+            <th>{{__('nav.name')}}</th>
+            <th>{{__('nav.author')}}</th>
+            <th>{{__('nav.publisher')}}</th>
+            <th>{{__('nav.credits')}}</th>
+            <th>{{__('nav.13')}}</th>
+            <th>{{__('nav.edit')}}</th>
+            <th>{{__('nav.delete')}}</th>
         </tr>
         @foreach($books as $book)
         <tr>
@@ -35,17 +34,22 @@
             <td>{{$book->auther}}</td>
             <td>{{$book->publisher}}</td>
             <td>{{$book->No_credits}}</td>
-            <td>{{$book->teacher->name}}</td>
+           
             <td>{{$book->curriculum->description}}</td>
-            <td><a href="/book/{{$book->id}}/edit" class="edit">edit</a></td>
+
+            <td><a href="/book/{{$book->id}}/edit" class=""><i class="fas fa-edit"></i></a></td>
             <td>
                 <form action="/book/{{$book->id}}" method="post">
                     @csrf
                     @method('delete')
-                    <input type="submit" value="delete">
+                    <input type="submit" value="{{__('nav.delete')}}" id="Mit">
+                    <!-- <i class="fas fa-trash-alt"></i> -->
                 </form>
             </td>
         </tr>
         @endforeach
     </table>
+
+  
+
 @endsection

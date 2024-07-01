@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="asset/css/style.css"> -->
+    <link rel="stylesheet" href="asset/css/dycalendar.css">
+    <link rel="stylesheet" href="asset/css/dycalendar 1.css">
+    <title>Dynamic Calender</title>
+</head>
+
+<body>
+
+  
+    <section>
+        <div class="box">
+            <div class="container">
+                <div id="dycalendar"></div>
+            </div>
+        </div>
+    </section>
+    <script src="asset/js/dycalendar.js"></script>
+    <script>
+        dycalendar.draw({
+            target: '#dycalendar',
+            type: 'month', /* // <-- Show today */
+            dayformat: 'full',
+            monthformat: 'full',
+            highlighttargetdate: true,
+            prevnextbutton: 'show'
+        })
+    </script>
+</body>
+
+</html>

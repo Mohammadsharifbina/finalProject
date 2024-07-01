@@ -2,9 +2,9 @@
 @section('route','news')
 @section('twelfth','active')
 @section('content')
-<a href="/@yield('route')" id="back-button" >back</a>
+<a href="/NW" id="back-button" >back</a>
 
-<form action="/news" method="post" id="form" enctype="multipart/form-data" class="form">
+<form action="/NW" method="post" id="form" enctype="multipart/form-data" class="form">
   @csrf
   @if(session('success'))
         <div class="alert">
@@ -26,7 +26,11 @@
   <label for="">date</label>
       <input type="date" name="date" placeholder="date" max="<?php echo date('Y-m-d');?>" value="{{old('date')}}">
   </div>
-  <span class="error">@error('date') {{ $message }} @enderror</span>
+  <div class="inputs-labels">
+  <label for="">image</label>
+      <input type="file" name="image" placeholder="date"  value="{{old('image')}}">
+  </div>
+ 
   <div class="inputs-labels">
   <label for="">time</label>
       <input type="time" name="time" placeholder="time" value="{{old('time')}}">

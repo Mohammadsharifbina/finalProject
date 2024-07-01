@@ -19,5 +19,15 @@ class Teacher extends Model
     public function department(){
         return $this->belongsTo(Department::class);
     }
+    public function comment(){
+        return $this->belongsTo(Comment::class);
+    }
+    public function skills(){
+        return $this->hasMany(Skill::class);
+    }
+    public function projects(){
+        return $this->hasMany(TeacherProject::class);
+    }
     use HasFactory;
+
 }

@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="">
+    <h3>first semester</h3>
+    <table id="myTable">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restrict Date Selection</title>
-</head>
+        <tr>
 
-<body>
+            <th>book</th>
+            <th>marks</th>
+            <th>total</th>
+        </tr>
+        @foreach ($marks1 as $r)
+        <tr>
+            <td> <span>{{$r->book->name}}</span></td>
+            <td> <span id="credit">{{$r->Marks}}</span> </td>
+            <td> <span id="marks">{{$r->total}}</span></td>
 
-    <label for="date">Select a Date:</label>
-    <input type="date" id="date" name="date">
+        </tr>
+        @endforeach
+        <tr>
+            <td></td>
+            <td style="text-align:center;background:grey;"> <span>{{$results1}}%</span></td>
+            <td></td>
 
-
-</body>
-
-</html>
+        </tr>
+    </table>
+</div>

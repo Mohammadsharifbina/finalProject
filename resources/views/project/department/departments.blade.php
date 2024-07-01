@@ -5,7 +5,7 @@
 @section('first','active')
 @section('content')
 <div id="alert">
-    <a href="@yield('route')/create" id="create">create</a>
+    <a href="@yield('route')/create" id="create">{{__('nav.create')}}</a>
 
     
     @if(session('success'))
@@ -29,13 +29,13 @@
 </div>
 <table id="myTable">
         <tr>
-            <th>name</th>
-            <th>email</th>
+            <th>{{__('nav.name')}}</th>
+            <th>{{__('nav.email')}}</th>
            
             <th>code</th>
-            <th>str_date</th>
-            <th>edit</th>
-            <th>delete</th>
+            <th>{{__('nav.date')}}</th>
+            <th>{{__('nav.edit')}}</th>
+            <th>{{__('nav.delete')}}</th>
         </tr>
         @foreach($departments as $department)
         <tr>
@@ -44,12 +44,12 @@
             <td>{{$department->code}}</td>
             <td>{{$department->STR_date}}</td>
            
-            <td><a href="/department/{{$department->id}}/edit" class="edit">edit</a></td>
+            <td><a href="/department/{{$department->id}}/edit" class="edit">{{__('nav.edit')}}</a></td>
             <td>
                 <form action="/department/{{$department->id}}" method="post">
                 @csrf
                 @method('delete')
-                <input type="submit" value="delete">
+                <input type="submit" value="{{__('nav.delete')}}">
                 </form>
             </td>
            

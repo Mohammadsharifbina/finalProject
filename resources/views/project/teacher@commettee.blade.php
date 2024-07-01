@@ -1,5 +1,6 @@
 @extends('project.dashboard.master')
-
+@section('thirteen','active')
+@section('route','teacher')
 @section('content')
 <div class="top-section">
 

@@ -6,7 +6,7 @@
 <div id="alert">
     <div>
 
-        <a href="@yield('route')/create" id="create">create</a>
+        <a href="@yield('route')/create" id="create">{{__('nav.create')}}</a>
     </div>
 
     
@@ -20,16 +20,16 @@
 </div>
 <table id="myTable">
     <tr>
-        <td>name</td>
-        <td>email</td>
-        <td>age</td>
-        <td>gender</td>
-        <td>job</td>
+        <th>{{__('nav.name')}}</th>
+        <th>{{__('nav.email')}}</th>
+        <th>{{__('nav.age')}}</th>
+        <th>{{__('nav.gender')}}</th>
+        <th>{{__('nav.job')}}</th>
         <!-- <td>image</td> -->
-        <td>str date</td>
-        <td>department</td>
-        <td>edit</td>
-        <td>delete</td>
+        <th>{{__('nav.date')}}</t>
+        <th>{{__('nav.9')}}</th>
+        <th>{{__('nav.edit')}}</th>
+        <th>{{__('nav.delete')}}</th>
     </tr>
     @foreach($employees as $c)
     <tr>
@@ -41,12 +41,12 @@
         <!-- <td class="image"><img src="{{asset('employees/'.$c->image)}}" alt=""></td> -->
         <td>{{$c->str_date}}</td>
         <td>{{$c->department->name}}</td>
-        <td><a href="employee/{{$c->id}}/edit" class="edit">edit</a></td>
+        <td><a href="employee/{{$c->id}}/edit" class="edit">{{__('nav.edit')}}</a></td>
         <td>
             <form action="/employee/{{$c->id}}" method="post">
                 @csrf
                 @method('delete')
-                <input type="submit" value="delete">
+                <input type="submit" value="{{__('nav.delete')}}">
             </form>
         </td>
     </tr>

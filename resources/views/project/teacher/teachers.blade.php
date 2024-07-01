@@ -6,7 +6,7 @@
 <div id="alert">
     <div>
 
-        <a href="@yield('route')/create" id="create">create</a>
+        <a href="@yield('route')/create" id="create">{{__('nav.create')}}</a>
     </div>
 
     
@@ -22,15 +22,15 @@
         <tr>
             
 
-            <th>name</th>
-            <th>email</th>
+            <th>{{__('nav.name')}}</th>
+            <th>{{__('nav.email')}}</th>
             
-            <th>gender</th>
+            <th>{{__('nav.gender')}}</th>
             
             <th>DM</th>
             <!-- <th>image</th> -->
-            <th>edit</th>
-            <th>delete</th>
+            <th>{{__('nav.edit')}}</th>
+            <th>{{__('nav.delete')}}</th>
         </tr>
         @foreach($teachers as $teacher)
         <tr>
@@ -41,12 +41,12 @@
             
             <td>{{$teacher->department->name}}</td>
             <!-- <td><img src="{{asset('teachers/'.$teacher->image)}}" alt=""></td> -->
-            <td><a href="teacher/{{$teacher->id}}/edit" class="edit">edit</a></td>
+            <td><a href="teacher/{{$teacher->id}}/edit" class="edit">{{__('nav.edit')}}</a></td>
             <td>
                 <form action="/teacher/{{$teacher->id}}" method="post">
                 @csrf
                 @method('delete')
-                <input type="submit" value="delete">
+                <input type="submit" value="{{__('nav.delete')}}">
                 </form>
             </td>
           

@@ -1,4 +1,9 @@
 <style>
+    
+	@font-face {
+		font-family: "bahijTiter";
+		src: url('Bahij Badr-Bold.ttf');
+	}
     .form{
         
         width:60%;
@@ -37,6 +42,7 @@
         color:#0A1D56;
         font-size:0.8em;
     }
+    @fon
     select{
         margin-bottom:10px;
         padding:5px 0;
@@ -99,16 +105,17 @@
         #back-button{
             width:100px;
             /* background:#8bc9a6; */
-            position: absolute;
+            /* position: absolute; */
             background:#0A1D56;
             left:20%;
-            top:20%;
+            top:30%;
             padding:5px 10px;
-            transform:translate(-50%,-505);
+            /* transform:translate(-50%,-505); */
             color:white;
             text-align:center;
             z-index: 1;
             border-radius: 5px;
+            height: 30px;
         }
     #back-button:hover{
         background:#492E87;
@@ -168,6 +175,7 @@ form .error{
     font-size:0.8em;
 
 }
+
 #selected{
     background:blue;
 }
@@ -181,6 +189,16 @@ form .error{
   }
   #alert .alert{
     color:red;
+    
+  }
+  #profile-image{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: 10em;
+    height: 10em;
+  }
+  #profile-image img{
     
   }
 </style>

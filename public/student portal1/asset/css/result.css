@@ -1,0 +1,152 @@
+body{
+    width: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.wrapper .container{
+    width: 80%;
+    padding: 1em;
+}
+.wrapper .container .table{
+    width: 100%;
+    background-color: rgba(83, 88, 87,0.3);
+    
+}
+.second_table{
+    background-color: rgba(83, 88, 87,0.3);
+    color: black;
+    margin-top: 0.3em;
+}
+.second_table th,td{
+    padding: 0.3em;
+    color: white;
+    width: 1em;
+    border: 0.2em solid #2e8b57;
+}
+input{
+    padding: 0.7em;
+    outline: none;
+    background-color: none;
+}
+.table-btn .btn{
+    padding: 1em;
+    border: none;
+    background-color: none;
+    background-color:gray;
+    transition: all 0.2s ease;
+    margin: 0.5em 0;
+    box-shadow: 0.2em 0.2em 0 gray;
+    font-weight: 600;
+    color:white;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+
+}
+.table-btn .btn:hover{
+    background-color: lightblue;
+}
+.btn:active{
+    transform: scale(0.2);
+
+}
+
+.link_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7em;
+
+}
+.link_btn li{
+    list-style: none;
+    padding: 0 2em;
+    transition: all 0.2s ease;
+    
+}
+.link_btn li:active{
+    transform: scale(0.3);
+}
+.link_btn li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(100,100,200,0.7);
+    padding: 0.8em;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em 0 gray;
+
+    
+}
+.table-btn{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    /* width: 260px; */
+    padding: 0px;
+    
+}
+
+@media screen and (max-width:900px) {
+    .wrapper{
+        width:100%;
+    }
+   .wrapper .container{
+        width: 90%;
+    }
+   .wrapper .container .table{
+        width: 100%;
+        
+    }
+}
+@media screen and (max-width:800px) {
+    .wrapper{
+        width: 100%;
+        display:block;
+       
+    }
+   .wrapper .container{
+        width:100%;
+    }
+  td{
+    padding:0.4em;
+  }
+    input{
+        width: 10em;
+    };
+}
+@media screen and (max-width:800px) {
+    
+  
+    input{
+        width: 8em;
+    };
+}
+@media screen and (max-width:580px) {
+    
+  td{
+    width: 1em;
+  padding: 0;
+  }
+    input{
+        width: 4em;
+    }
+    .link_btn li{
+      
+        padding: 0 2em;
+    }
+
+}
+@media screen and (max-width:480px) {
+    
+      .link_btn li{
+        
+          padding: 0 1em;
+      }
+  
+  }

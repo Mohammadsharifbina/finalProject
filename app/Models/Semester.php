@@ -16,5 +16,8 @@ class Semester extends Model
     public function students(){
         return $this->hasMany(Student::class);
     }
+    public function books(){
+        return $this->hasMany(Book::class);
+    }
     use HasFactory;
 }

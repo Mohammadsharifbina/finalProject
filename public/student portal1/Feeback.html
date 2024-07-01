@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Document</title>
+</head>
+<style>
+    section{
+        background-image: url(/asset/images/back.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        opacity: 0.8;
+    }
+   
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10rem;
+        
+        
+        
+    }
+    .container .wrapper{
+        background-color: rgb(255, 255, 255);
+        /* padding: 10px; */
+        border-radius: 10px;
+        width: 22rem;
+        overflow: hidden;
+        position: relative;
+        transform: translateY(130px);
+        box-shadow: 0.2em 0.3em rgb(200, 100, 100);
+       
+    }
+    
+    .container .wrapper .text{
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        padding-top: 13px;
+        color: black;
+        text-align: center;
+    }
+    .container .wrapper .emoji{
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+        margin-bottom: 12px;
+       
+    }
+    .container .wrapper .emoji>div:not(:first-child){
+        margin-left: 1rem;
+    }
+    .container .wrapper .emoji>div{
+        cursor: pointer;
+        transition:transform .2s ease-in;
+    }
+    .container .wrapper .emoji>div:hover{
+        transform: scale(1.4);
+
+    }
+    .container .wrapper .texterea{
+        width: 100%;
+        display: block;
+        background-color: rgb(122, 120, 120);
+        color: white;
+        border: none;
+        resize: none;
+        outline: none;
+        height: 0;
+        opacity: 0;
+        transition: all .6s cubic-bezier(0.075,0.082,0.165,1);
+    }
+    .container .wrapper .texterea--active{
+        padding: 1rem;
+        opacity: 1;
+        height: 6rem;
+    }
+    .container .wrapper .btn{
+        color:#fff;
+        padding: 5px 20px;
+        border-radius: 6px;
+        background-color: rgb(10, 91, 102);
+        transition: all 0.2s ease;
+        border: none;
+        outline: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        background-color: none;
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+        text-decoration: none;
+        display: none;
+    }
+    .container .wrapper .btn:active{
+        transform: scale(0.3);
+    }
+    .container .wrapper .btn--active{
+        display: inline-block;
+    }
+    @media screen and (max-width:435px) {
+      .container .wrapper{
+            padding:0px 10px;
+            width: 20rem;
+        }
+        .container .wrapper .btn{
+           margin-right: 0.5em;
+        }
+    }
+</style>
+<body>
+<section>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="asset/images/sim-logo.png" alt="">
+            </div>
+
+            <span class="logo_name">
+                <h1>عامه اداره</h1>
+                <p>Student Interface</p>
+            </span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-search">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-search"></i>
+                        <input type="search" class="link-name" placeholder="Search..." />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="dycalendar.html">
+                        <i class="uil uil-calendar-alt"></i>
+                        <span class="link-name">My Calendar</span>
+                    </a></li>
+                <li><a href="Personal-details.html" >
+                        <i class="uil uil-diary"></i>
+                        <span class="link-name">personal-details</span>
+                    </a></li> 
+                
+                <li><a href="result.html">
+                        <i class="uil uil-university "></i>
+                        <span class="link-name">Culculate Resulte</span>
+                    </a></li>
+                    <li><a href="SigninResult.html">
+                        <i class="uil uil-university "></i>
+                        <span class="link-name">SignIn Result</span>
+                    </a></li>
+                    
+                <li><a href="student.html">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Student Details</span>
+                    </a></li>
+                    <li><a href="Student Information.html">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Student Information</span>
+                    </a></li>
+                <li><a href="Feeback.html">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Faculty Feedback</span>
+                    </a></li>
+            </ul>
+
+
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <div id="moon-sun">
+                            <i class='uil uil-brightness'></i>
+                        </div>
+                        <span class="link-name" id="link-text">Light Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <div class="abesit">
+                <i class="uil uil-bars sidebar-toggle"></i>
+                <span class="logo_name clg-logo">
+                    <img src="asset/images/logo.png" alt="">
+                </span>
+            </div>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <div class="avatar">
+                <img src="asset/images/avatar.png" alt="">
+               
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="wrapper">
+            <p class="text">How Would You Rate This App?</p>
+            <div class="emoji">
+                <div>😆</div>
+                <div>😐</div>
+                <div>🙂</div>
+                <div>😃</div>
+                <div>😍</div>
+            </div>
+            <textarea name="textarea" id="" cols="30" rows="3" placeholder="Write Your Opinion!" class="texterea"></textarea>
+            <a href="#" class="btn">Send</a>
+        </div>
+    </div>
+</section>
+    <script src="asset/js/script.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>

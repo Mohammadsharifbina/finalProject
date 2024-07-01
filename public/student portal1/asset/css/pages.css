@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    --default: #fff;
+    --primary: rgb(148, 143, 143);
+    --secondary: #3b3939;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    scroll-snap-type: mandatory;
+}
+/* .container{
+    width: 100%;
+    display: flex;
+    
+} */
+
+a{
+    color: var(--default);
+    text-decoration: none;
+}
+i{
+    margin: 0 0.5rem;
+}
+.body2{
+    background-color: var(--secondary);
+    width: 80%;
+    margin: 5rem 0;
+    font-family: 'Space Grotesk', sans-serif !important;
+    box-shadow: 5px 5px 10px var(--secondary);
+    color: var(--default);
+}
+.body2-nav{
+    width: 100%;
+    color: var(--default);
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+.body2-nav h1{
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+.body-contents{
+    width: 100%;
+    height: auto;
+    display: flex; 
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    padding: 1rem;
+}
+.body-contents p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+.profileNav{
+   
+    width:70%;
+    background-color: var(--secondary);
+    list-style-type: none;
+    display: flex;
+    /* gap: 1rem; */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    border-radius: 2em;
+    transition: all 0.5s;
+}
+.profileNav:hover{
+    background-color:rgba(25,100,200,0.3);
+    
+}
+.profileNav li{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 4px 0;
+
+}
+.profileNav li a{
+    padding: 0.5em;
+    display: inline-block;
+    /* background-color: gray; */
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    transition: all 0.5s;
+
+}
+.profileNav li a:hover{
+    background-color: rgba(255,0,0,0.3);
+    
+}
+.profileNav li a:active{
+    transform: scale(0.3);
+    background-color: aqua;
+}
+form{
+    width: 50%;
+    
+}
+form > fieldset{
+    width: 100%;
+    margin: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem !important;
+    border: 1px solid var(--default) !important;
+    color: var(--default) !important;
+    padding: 5px;
+}
+legend{
+    font-size: 1.5rem !important;
+    color: var(--secondary) !important;
+}
+input, select, button, textarea{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    resize: none;
+}
+input,select,button:hover{
+    cursor:url('http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif'), auto !important; 
+    
+}
+.submitBtn{
+    transition: all 0.2s ease;
+}
+.submitBtn:active{
+    transform: scale(0.3);
+    
+}
+.gender{
+    display: flex;
+    
+}
+.gender .male{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    padding-right: 20px;
+}
+@media screen and (max-width:1130px) {
+    .body2{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1100px) {
+    .body2{
+        width: 100%;
+    }
+}
+@media screen and (max-width:870px) {
+    .profileNav{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:725px) {
+    .profileNav{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width:490px) {
+    .profileNav{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3em;
+        
+    }
+    .profileNav li a{
+    background-color: var(--secondary);
+    
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.5em;
+    }
+    .body-contents{
+        display: block;
+    }
+}

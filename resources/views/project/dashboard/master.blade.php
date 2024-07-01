@@ -6,11 +6,19 @@
 	<title>Deshbord</title>
 	<!-- <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> -->
 	<link rel="stylesheet" href="style.css">
-	
+    <link rel="stylesheet" href="{{asset('fonts/css/all.css')}}">
 	@include('project.dashboard.style')
     <style>
-       
-
+		
+		@if (LaravelLocalization::getCurrentLocaleDirection()=="rtl")
+		main{
+			direction: rtl;
+		}
+		@endif
+		@font-face {
+		font-family: "bahijTiter";
+		src: url('Bahij Badr-Bold.ttf');
+	}
 :root {
 	--main-color: #0A1D56;
 	--color-dark: #1D2231;
@@ -24,6 +32,9 @@
 	list-style-type: none;
 	text-decoration: none;
 	font-family: 'Poppins' , sans-serif;
+	
+
+
 
 }
 
@@ -44,6 +55,7 @@
 	height: 90px;
 	padding: 1rem 0rem 1rem 2rem;
 	color: #fff;
+	border-bottom: 3px solid white;
 }
 
 .sidebar-brand span{
@@ -59,16 +71,18 @@
 
 .sidebar-menu li{
 	width: 100%;
-	margin-bottom: 0.5rem;
+
 	padding-left: 1rem;
 }
 
 .sidebar-menu a{
+	
 	padding:5px 0;
+	
 	padding-left: 0.5em;
 	display: block;
 	color: #fff;
-	font-style: 1.1rem;
+	
 	text-transform:capitalize;
 }
 .sidebar-menu a:hover{
@@ -85,9 +99,10 @@
 	color: var(--main-color);
 	border-radius: 30px 0px 0px 30px; 
 }
-.sidebar-menu a span:frist-child {
-	font-size: 1rem;
+.sidebar-menu a span:first-child {
+	font-size: 0.1rem;
 	padding-right: 1rem;
+	margin-top: 1em;
 }
 
 #nav-toggle:checked + .sidebar {
@@ -133,6 +148,7 @@ header {
 	top: 0;
 	z-index: 100;
 	transition: left 300ms;
+	direction: rtl;
 }
 
 #nav-toggle {
@@ -266,7 +282,16 @@ table {
 th{
 	padding:20px 0;
 	text-transform:uppercase;
+	background-color: #0A1D56;
+	color:white;
+
 	/* border: 1px solid gray;; */
+}
+#myTable td:nth-child(odd){
+	background-color: rgb(242, 242, 242);
+}
+#myTable tr td{
+	font-size: 1em;
 }
 thead tr {
 	border-top: 1px solid #f0f0f0;
@@ -274,6 +299,7 @@ thead tr {
 }
 thead td {
 	font-weight: 700;
+	font-size: 2em;
 }
 td {
 	padding: .5rem 1rem;
@@ -479,6 +505,7 @@ tr td:last-child {
     .form{
         display:flex;
 		align:center;
+		padding: 1em;
     }
 
 	.admin{
@@ -490,6 +517,12 @@ tr td:last-child {
 		font-size:25px;
 		letter-spacing:16px;
 	}
+	table tr:last-child td:last-child{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	input[type="submit"]{
 		background:none;
 		border:none;
@@ -502,6 +535,7 @@ tr td:last-child {
 		border-radius:5px;
 		transition:1s;
 		cursor: pointer;
+		
 	}
 	.edit{
 		border-radius:5px;
@@ -518,6 +552,18 @@ tr td:last-child {
 	.edit:hover{
 		background:lightblue;
 		color:black;
+	}
+	table tr #lastTd{
+		width: 100% !important;
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		/* margin-top: 1em; */
+		
+	}
+	#desc{
+		overflow: hidden;
+		width: 200px;
 	}
 	table tr td form input[type="submit"]:hover{
 		color:white;
@@ -556,7 +602,7 @@ tr td:last-child {
     }
     </style>
 </head>
-<body>
+<body >
   
  <input type="checkbox" id="nav-toggle">
  @include('project.dashboard.aside')
@@ -601,7 +647,7 @@ tr td:last-child {
    
 
       for(var u=0; u<tr.length;u++){
-        let td= tr[u].getElementsByTagName("td")[1];
+        let td= tr[u].getElementsByTagName("td")[0];
         
         if(td){
          let myValue=td.textContent || td.innerHTML;

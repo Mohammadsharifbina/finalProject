@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+    --default: #fff;
+    --primary: rgb(148, 143, 143);
+    --secondary:#02335D;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    scroll-snap-type: mandatory;
+
+
+
+    --governor-bay: #302caa ;
+    --givry: #f8dbbc;
+    --athens-gray: #f1f2f6;
+    --amethyst-smoke: #9490b2;
+    --squirrel: #918274;
+    --aluminium: #abadb5;
+    --russett: #835e60;
+    --apple: #379939;
+    --alpine: #c19733;
+    --blossom: #d7aeb3;
+    
+}
+/* .container{
+    width: 100%;
+    display: flex;
+    
+} */
+
+
+form input{
+    border: none;
+    background: none;
+/* background-color: rgb(235, 243, 241) !important; */
+background-color: #f0f0f0f1;
+}
+
+a{
+    color: var(--default);
+    text-decoration: none;
+}
+i{
+    margin: 0 0.5rem;
+}
+body{
+    
+    /* background:linear-gradient(#00dae0,#fa00fe); */
+    background-color:beige;
+}
+.body2{
+    background-color: #fff;
+    width: 70%;
+    margin: 5em auto;
+    font-family: 'Space Grotesk', sans-serif !important;
+    box-shadow: 5px 5px 10px #686874;
+    color: #686874;
+    font-family: 'Times New Roman', Times, serif;
+}
+.body2-nav{
+    width: 100%;
+    color: var(--default);
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+.body2-nav h1{
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+.body-contents{
+    width: 100%;
+    height: auto;
+    display: flex; 
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--primary); */
+    padding: 1rem;
+}
+.body-contents p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.profileNav{
+   
+    width:70%;
+    background-color: #1f12ff;
+    list-style-type: none;
+    display: flex;
+    /* gap: 1rem; */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    border-radius: 2em;
+    transition: all 0.5s;
+}
+.profileNav:hover{
+    
+}
+.profileNav li{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 4px 0;
+
+}
+.profileNav li a{
+    padding: 0.5em;
+    display: inline-block;
+    /* background-color: gray; */
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    transition: all 0.5s;
+
+}
+.profileNav li a:hover{
+    color: #1f12ff;
+    /* --secondary:#02335D; */
+
+    background-color:#fff;
+    
+}
+.profileNav li a:active{
+    transform: scale(0.3);
+    background-color: white;
+}
+form{
+    width: 50%;
+    
+}
+form > fieldset{
+    width: 100%;
+    margin: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem !important;
+    border: 2px solid var(--primary) !important;
+    color: var(--secondary) !important;
+    padding: 5px;
+}
+
+legend{
+    font-size: 1.5rem !important;
+    color: var(--secondary) !important;
+    padding-right: 0.5em;
+}
+input, select, button, textarea{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    resize: none;
+    border: none;
+    border: 1px solid (--givry);
+    color: var(--secondary);
+    
+}
+#submit{
+    background-color: #1f12ff;
+    color: white;
+}
+
+
+input,select,button:hover{
+    cursor:url('http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif'), auto !important; 
+    border: none !important;
+    border: 1px solid (--givry) !important;
+    
+}
+.submitBtn{
+    transition: all 0.2s ease;
+}
+.submitBtn:active{
+    transform: scale(0.3);
+    
+}
+.gender{
+    display: flex;
+    
+}
+.gender .male{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    padding-right: 20px;
+}
+@media screen and (max-width:1130px) {
+    .body2{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1100px) {
+    .body2{
+        width: 100%;
+    }
+}
+@media screen and (max-width:870px) {
+    .profileNav{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:725px) {
+    .profileNav{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width:690px) {
+    form > fieldset{
+        width: 120%;
+    }
+    
+}
+@media screen and (max-width:490px) {
+    .profileNav{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3em;
+        width: 15rem;
+        
+    }
+    .profileNav li a{
+    background-color: var(--secondary);
+    
+
+    }
+   
+    form{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.5em;
+    }
+    .body-contents{
+        display: block;
+    }
+    form > fieldset{
+        width: 168%;
+    }
+}
+@media screen and (max-width:480px) {
+    form > fieldset{
+        width: 200%;
+    }
+   
+}
+@media screen and (max-width:420px) {
+    form > fieldset{
+        width: 210%;
+        margin-right: 2em;
+       
+      
+    
+    }
+    .profileNav{
+        /* margin: 0 !important; */
+        margin:0.7em 1.5em  0em;
+        gap: 0;
+
+
+    }
+   
+}
+@media screen and (max-width:393px) {
+    form > fieldset{
+        width: 190%;
+    }
+    /* .profileNav{
+        margin-right:5em;
+    } */
+   
+}

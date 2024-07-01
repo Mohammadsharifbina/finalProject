@@ -16,5 +16,8 @@ class Student extends Model
     public function cllass(){
         return $this->belongsTo(Cllass::class);
     }
+    public function marks(){
+        return $this->hasMany(Mark::class);
+    }
     use HasFactory;
 }

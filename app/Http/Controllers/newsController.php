@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Department;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\News;
 use Illuminate\Support\Facades\Validator;
+use App\Notifications\AdminNotification;
+use Notification;
+use App\Models\User;
 class newsController extends Controller
 {
     /**
@@ -15,6 +19,8 @@ class newsController extends Controller
      */
     public function index()
     {
+      
+        
         $news=News::all();
         return view("project.news.news",compact("news"));
     }
@@ -38,11 +44,14 @@ class newsController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
+        $user=User::all();
         $validator=Validator::make($request->all(),[
             'issue'=> 'required|unique:news,issue',
             'description'=> 'required|min:10',
             'date'=> 'date:before_or_equal,today',
             'time'=> 'required',
+            'image'=> 'nullable',
         ]);
         if($validator->fails()){
             return redirect()->back()->withErrors($validator)->withInput();
@@ -50,11 +59,29 @@ class newsController extends Controller
         $request->session()->flash("success","news added successfully you can add other");
         $news=new News();
         $news->issue=$request->issue;
-        $news->Desription=$request->description;
+        $news->Description=$request->description;
         $news->date=$request->date;
         $news->time=$request->time;
         $news->department_id=$request->department;
+        $time=Carbon::now()->subHour();
+      
+        if($request->hasfile("image")){
+            $file = $request->file("image");
+            
+            $extension = $file->getClientOriginalExtension();
+            $name=time().".".$extension;
+            $file=$file->move("news/", $name);
+            $news->image = $name;
+        }
         $news->save();
+        $message=[
+            'greeting'=>"hi ",
+            'body'=>"new news",
+            'actiontext'=>"view",
+            'actionurl'=>'http://127.0.0.1:8000/',
+            'lastline'=>"thank you",
+        ];
+        Notification::send($user,new AdminNotification($message));
         return redirect()->back();
 
     }
@@ -67,7 +94,8 @@ class newsController extends Controller
      */
     public function show($id)
     {
-        //
+        $new=News::find($id);
+        return view('project.news.newDetails',compact('new'));
     }
 
     /**
@@ -105,12 +133,20 @@ class newsController extends Controller
         }
         $news=News::find($id);
         $news->issue=$request->issue;
-        $news->Desription=$request->description;
+        $news->Description=$request->description;
         $news->date=$request->date;
         $news->time=$request->time;
         $news->department_id=$request->department;
+        if($request->hasfile("image")){
+            $file = $request->file("image");
+            
+            $extension = $file->getClientOriginalExtension();
+            $name=time().".".$extension;
+            $file=$file->move("news/", $name);
+            $news->image = $name;
+        }
         $news->save();
-        return redirect('news')->with('success','new updated successfully');
+        return redirect('NW')->with('success','new updated successfully');
         
     }
 

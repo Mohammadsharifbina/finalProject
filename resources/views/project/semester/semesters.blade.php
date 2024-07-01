@@ -4,7 +4,7 @@
 @section('content')
 
 <div id="alert">
-    <a href="@yield('route')/create" id="create">create</a>
+    <a href="@yield('route')/create" id="create">{{__('nav.create')}}</a>
 
     
     @if(session('success'))
@@ -17,23 +17,23 @@
 </div>
 <table id="myTable">
     <tr>
-        <th>name</th>
-        <th>class</th>
-        <th>curriculum</th>
-        <th>edit</th>
-        <th>delete</th>
+        <th>{{__('nav.name')}}</th>
+        <th>{{__('nav.11')}}</th>
+        <th>{{__('nav.13')}}</th>
+        <th>{{__('nav.edit')}}</th>
+        <th>{{__('nav.delete')}}</th>
     </tr>
     @foreach($semesters as $semester)
     <tr>
         <td>{{$semester->name}}</td>
         <td>{{$semester->cllass->name}}</td>
         <td>{{$semester->curriculum->description}}</td>
-        <td><a  href="/semester/{{$semester->id}}/edit" class="edit" id="submit">edit</a></td>
+        <td><a  href="/semester/{{$semester->id}}/edit" class="edit" id="submit">{{__('nav.edit')}}</a></td>
         <td>
             <form action="/semester/{{$semester->id}}" method="post">
         @csrf
         @method('delete')
-        <input type="submit" value="delete" id="submit">
+        <input type="submit" value="{{__('nav.delete')}}" id="submit">
         </form>
         </td>
     </tr>

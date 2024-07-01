@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="asset/css/login.css">
+
+    <title>Sim Portal Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        
+            <!-- <img src="preview.png" alt="login image" class="login__img"> -->
+
+            <form action="" class="login__form">
+                
+
+                <div>
+                    <h1 class="login__title">
+                        <span>Welcome</span> Back
+                    </h1>
+                    <p class="login__description">
+                        Welcome! Please login to continue.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="login__inputs">
+                        <div>
+                            <label for="" class="login__label">Username</label>
+                            <input type="text" placeholder="Enter your username" pattern="[0-9]{4}[a-z]{2}"
+                                required class="login__input">
+                        </div>
+
+                        <div>
+                            <label for="" class="login__label">Password</label>
+
+                            <div class="login__box">
+                                <input type="password" placeholder="Enter your password" required class="login__input"
+                                    id="input-pass">
+                                <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input">
+                            <label for="" class="login__check-label">Remember me</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="login__buttons">
+                        <!-- <a href=""><button class="login__button" id="input-button">Login</button></a> -->
+                        <button class="login__button" id="input-button"><a href="../index.html">Login</a></button>
+                        <!-- <button class="login__button login__button-ghost">Sign Up</button> -->
+                    </div>
+
+                    <a href="#" class="login__forgot">Forgot Passowrd?</a>
+                </div>
+            </form>
+       
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="login.js"></script>
+</body>
+
+</html>

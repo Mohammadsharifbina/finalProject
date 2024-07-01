@@ -17,12 +17,12 @@
 </div>
 <table id="myTable">
         <tr>
-            <th>name</th>
-            <th>no term</th>
+            <th>{{__('nav.name')}}</th>
+            <th>{{__('nav.no term')}}</th>
            
-            <th>department</th>
-            <th>edit</th>
-            <th>delete</th>
+            <th>{{__('nav.9')}}</th>
+            <th>{{__('nav.edit')}}</th>
+            <th>{{__('nav.delete')}}</th>
         </tr>
         @foreach($classes as $class)
         <tr>
@@ -31,12 +31,12 @@
             <td>{{$class->department->name}}</td>
             
            
-            <td><a href="/class/{{$class->id}}/edit" class="edit">edit</a></td>
+            <td><a href="/class/{{$class->id}}/edit" class="edit">{{__('nav.edit')}}</a></td>
             <td>
                 <form action="/class/{{$class->id}}" method="post">
                 @csrf
                 @method('delete')
-                <input type="submit" value="delete">
+                <input type="submit" value="{{__('nav.delete')}}">
                 </form>
             </td>
           

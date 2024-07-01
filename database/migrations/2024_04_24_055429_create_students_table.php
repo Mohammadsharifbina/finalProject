@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('Father');
             $table->string('email')->unique();
+            $table->string('phone');
             $table->integer('age');
             $table->string('image');
             $table->string('str_date');
             $table->string('gender');
             $table->foreignId('department_id')->constrained();
-            $table->foreignId('cllass_id')->constrained();
-            $table->foreignId('semester_id')->constrained();
+           
             $table->timestamps();
         });
     }

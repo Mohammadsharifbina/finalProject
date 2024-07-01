@@ -39,7 +39,7 @@
     <span class="error">@error('no_credits') {{ $message }} @enderror</span>
         <div class="inputs-labels">
  
-        <label for="">teacher</label>
+        <label for="">semester</label>
         <select name="teacher_id" id="">
             @foreach($teachers as $teacher)
             <option value="{{$teacher->id}}">{{$teacher->name}}</option>

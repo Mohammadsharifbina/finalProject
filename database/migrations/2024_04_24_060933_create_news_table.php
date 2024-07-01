@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('issue');
-            $table->text('Desription');
+            $table->text('Description');
             $table->string('date');
             $table->time('time');
+            $table->string('image')->nullable()->value('false');
             $table->foreignId('department_id')->constrained();
             $table->timestamps();
         });
